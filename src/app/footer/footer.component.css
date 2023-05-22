@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .links {
+  margin: 1rem;
+}
+footer .links span {
+  margin: 1rem;
+}/*# sourceMappingURL=footer.component.css.map */
