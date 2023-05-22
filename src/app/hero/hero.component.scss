@@ -1,0 +1,17 @@
+#hero{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    background-image: url("../../assets/img/MG_8840-w1400-h1400.jpg");
+    .hero{
+        background-color: black;
+        color: white;
+        padding: 2rem;
+    }
+}
