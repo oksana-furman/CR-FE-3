@@ -1,0 +1,41 @@
+.navbar{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 0;
+    
+    background-color: rgba(252, 252, 252, 0);
+
+    .nav-item{
+       
+       .nav-link{
+            color: white;
+            border: 1px solid;
+            border-radius: 5px;
+            font-size: x-large;
+            font-family: 'Abril Fatface', cursive;
+        }
+
+    }
+    .nav-item:hover{
+        transform: scale(1.2);
+        transition: width 1s, height 1s, transform 1s;
+    }
+    .nav-item:hover > .nav-link{
+        border: none;
+
+    }
+
+    }
+    .navbar-brand{
+        background-color: white;
+        border-radius: 50%;
+    
+        .navbar-brand{
+                color: white;
+                font-size: x-large;
+                font-family: 'Abril Fatface', cursive;
+        }
+    }
+

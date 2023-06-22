@@ -1,1 +1,34 @@
-/*# sourceMappingURL=about.component.css.map */
+#content1, #content2, #content3, #content4 {
+  display: flex;
+  flex-direction: row;
+}
+#content1 .flexText, #content2 .flexText, #content3 .flexText, #content4 .flexText {
+  padding: 2rem;
+  margin: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#content1 .flexText .headline, #content2 .flexText .headline, #content3 .flexText .headline, #content4 .flexText .headline {
+  margin-bottom: 1em;
+}
+#content1 .flexText .decoration, #content2 .flexText .decoration, #content3 .flexText .decoration, #content4 .flexText .decoration {
+  margin-bottom: 2rem;
+}
+#content1 .flexImg, #content2 .flexImg, #content3 .flexImg, #content4 .flexImg {
+  padding: 2rem;
+  margin: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content1 .flexImg .imageNotRound, #content2 .flexImg .imageNotRound, #content3 .flexImg .imageNotRound, #content4 .flexImg .imageNotRound {
+  height: 400px;
+}
+#content1 .flexImg #modal3, #content2 .flexImg #modal3, #content3 .flexImg #modal3, #content4 .flexImg #modal3 {
+  margin: auto;
+  width: 70rem !important;
+}/*# sourceMappingURL=about.component.css.map */

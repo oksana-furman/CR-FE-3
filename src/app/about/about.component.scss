@@ -1,0 +1,35 @@
+#content1, #content2, #content3, #content4{
+    display: flex;
+    flex-direction: row;
+    .flexText{
+        padding: 2rem;
+        margin: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .headline{
+            margin-bottom: 1em;
+        }
+        .decoration{
+            margin-bottom: 2rem;
+        }
+    }
+    .flexImg{
+        padding: 2rem;
+        margin: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .imageNotRound{
+            height: 400px;
+        }
+        #modal3{
+            margin: auto;
+            // height: 50rem;
+            width: 70rem !important;
+        }
+    }
+}

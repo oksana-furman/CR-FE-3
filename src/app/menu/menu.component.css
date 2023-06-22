@@ -1,0 +1,54 @@
+#h1 {
+  font-size: xx-large !important;
+}
+
+.sortBtn {
+  background-color: white;
+  border: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.card .card-title, .card .card-text {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: contain;
+}
+.card .text {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin-top: 5rem;
+  visibility: hidden;
+}
+.card .btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.card:hover > .card-body .text {
+  visibility: visible;
+}
+
+#notAvail {
+  filter: grayscale(85%);
+}
+#notAvail .notAvail {
+  margin: 3px;
+  padding: 3px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#notAvail .notAvail p {
+  margin-bottom: 0;
+  color: black;
+}/*# sourceMappingURL=menu.component.css.map */

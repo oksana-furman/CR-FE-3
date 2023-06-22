@@ -1,4 +1,6 @@
 #hero {
+  position: relative;
+  width: 100;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +10,7 @@
   justify-content: center;
   align-items: center;
   min-height: 800px;
-  background-image: url("../../assets/img/MG_8840-w1400-h1400.jpg");
+  background-image: url("../../assets/img/capo-296V2878-w1400-h1400.jpg");
 }
 #hero .hero {
   background-color: black;

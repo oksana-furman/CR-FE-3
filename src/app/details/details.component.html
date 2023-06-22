@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="content w-100 m-auto mt-5">
+
+    <div class="d-flex align-items-center ms-5">
+        <div class="flex-shrink-0 ms-5">
+          <img src="{{ product.photo }}" alt="{{ product.name }}" id="image">
+        </div>
+        <div class="flex-grow-1 text-center">
+            <h1>{{ product.name }} <span id="spicy" *ngIf="product.spicyStatus == true"><i class="bi bi-fire"></i><i class="bi bi-fire"></i><i class="bi bi-fire"></i></span>
+                <br><span *ngIf="product.veganStatus == true">Vegan</span>
+                <span *ngIf="product.vegetarianStatus == true">Vegetarian</span></h1>
+            
+            <h2>Price: {{ product.price }} &#8364;</h2>
+            <h2 class="card-text tex">Ingridients: {{ product.ingridients }}.</h2>
+            <div id="btns">
+                <button class="btn" (click)="addToCart(product)">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+</div>

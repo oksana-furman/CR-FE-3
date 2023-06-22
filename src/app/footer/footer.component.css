@@ -1,4 +1,8 @@
 footer {
+  flex-shrink: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: black;
   width: 100%;
   margin-top: auto;
   display: flex;
@@ -6,8 +10,12 @@ footer {
   align-items: center;
 }
 footer .links {
+  color: white;
   margin: 1rem;
 }
 footer .links span {
   margin: 1rem;
+}
+footer p {
+  color: white;
 }/*# sourceMappingURL=footer.component.css.map */

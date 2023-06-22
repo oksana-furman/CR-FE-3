@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<app-hero></app-hero>
+<div class="content w-100 m-auto">
+    <h1 class="text-center m-5" id="h1">Our Menu</h1>
+
+    <div id="sort">
+        <button (click)="sortDown()" class="sortBtn m-2" id="sortd">Sort by price<i class="bi bi-arrow-down"></i></button>
+        <button (click)="sortUp()" class="sortBtn m-2" id="sortu">Sort by price<i class="bi bi-arrow-up"></i></button>
+
+    </div>
+
+    <div class="row row-cols-xlg-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-xs-1 my-lg-3 my-md-2 my-sm-1 my-xs-1 m-auto">
+        <div id="cards m-3" *ngFor="let product of products; index as id">
+            <div class="cards">
+                 <!-- if the product is available -->
+                 <ng-template [ngIf]="product.availability == true" [ngIfElse]="none">
+                    <div class="card m-2" id="Avail" style="width: 18rem; height: 22rem; background-image: url('{{ product.photo }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body h-75">
+                            <h2 class="card-title">{{ product.name }} <span *ngIf="product.spicyStatus == true"><i class="bi bi-fire"></i></span></h2>
+                            <p class="card-text">Price: {{ product.price }} &#8364;</p>
+                            <div class="text">
+                                <p class="card-text">Ingridients: {{ product.ingridients }} 
+                                    <br><span *ngIf="product.veganStatus == true">Vegan</span>
+                                    <span *ngIf="product.vegetarianStatus == true">Vegetarian</span></p>
+                            </div>
+                        </div>
+                        <div class="btns text-center">
+                            <button routerLink="/menu/{{ id }}" class="btn btn-dark m-2">Details</button>
+                            <button class="btn btn-dark m-2" (click)="addToCart(product)">Add to cart</button>
+                        </div>
+                    </div>
+                 </ng-template>
+
+                     <ng-template #none>
+                        <div class="card m-2" id="notAvail" style="width: 18rem; height: 22rem; background-image: url('{{ product.photo }}');">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <div class="card-body h-75">
+                                <h2 class="card-title">{{ product.name }} <span *ngIf="product.spicyStatus == true"><i class="bi bi-fire"></i></span></h2>
+                                <p class="card-text">Price: {{ product.price }} &#8364;</p>
+                                <div class="text">
+                                    <p class="card-text">Ingridients: {{ product.ingridients }} 
+                                        <br><span *ngIf="product.veganStatus == true">Vegan</span>
+                                        <span *ngIf="product.vegetarianStatus == true">Vegetarian</span></p>
+                                </div>
+                            </div>
+                            <div class="btns text-center notAvail">
+                                <p>This product is not available</p>
+                            </div>
+                        </div>
+                     </ng-template>
+                
+            </div>
+        </div>  
+    </div>
+</div>

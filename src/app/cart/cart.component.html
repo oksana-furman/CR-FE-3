@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div class="wraper pt-5" *ngIf="cartItems.length > 0">
+    <div class="w-75 m-auto content mt-5">
+        <table class="m-auto table table-borderless mt-5">
+            <tr *ngFor="let item of cartItems; index as i">
+                <td><img src="{{ item.photo }}" alt="{{ item.name }}" class="rounded-circle m-2 me-0" height="110px" width="110px"></td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }} &#8364;</td>
+                <td><i class="plus fs-5 bi bi-plus-circle-fill" (click)="plusQtty(i)"></i> {{ item.qtty }} <i class="minus fs-5 bi bi-dash-circle-fill" (click)="minusQtty(i)"></i> <i class="delete fs-4 bi bi-trash3-fill text-danger" (click)="deleteQtty(i)"></i></td>
+            </tr>
+        
+            <ng-template [ngIf]="total >= 50" [ngIfElse]="none">
+                <tr class="h1">Total (including VAT): <del>{{ total }} &#8364;.</del>  <span>{{ total - (total * 0.1) }} &#8364;.</span></tr>
+                <tr>Discount: 10%</tr>
+            </ng-template>
+            <ng-template #none>
+                <tr class="h1">Total (including VAT): {{ total }} &#8364;</tr>
+            </ng-template>
+        </table>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal">Checkout</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalLabel">Checkout Form</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                 <!-- checkout form inside the modal -->
+                <div class="formWraperm-2">
+                    <div class="form m-5" id="formDiv">
+                        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="form-group m-auto">
+                            <div id="error"></div>
+                            <label for="name" class="form-control">Name
+                                <input type="text" formControlName="name" id="name" class="form-control" placeholder="Name">
+                            </label>
+                            <label for="phoneNum" class="form-control">Phone Number
+                                <input type="phoneNum" formControlName="phoneNum" id="phoneNum" class="form-control" placeholder="Phone Number">
+                            </label>
+                            <label for="address" class="form-control">Address
+                                <input type="text" formControlName="address" id="address" class="form-control" placeholder="Address">
+                            </label>
+                            <label for="comment" class="form-control">Comment
+                                <input type="text" formControlName="comment" id="comment" class="form-control" placeholder="If you have some comments about your order.">
+                            </label>
+                    
+                            <button class="btn btn-dark m-2" type="submit">Purchase</button>
+                        </form>
+                    </div>
+
+                    <div id="message"></div>
+                </div>
+
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+<div class="wraper">
+    <div class="w-100 m-auto content content2" *ngIf="cartItems.length == 0" id="empty">
+        <h1 class="text-body-teriary text-center m-5">The cart is empty</h1>
+    </div>
+</div>

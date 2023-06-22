@@ -4,6 +4,7 @@
 }
 #content1 .flexLeft, #content2 .flexLeft, #content3 .flexLeft {
   padding: 2rem;
+  margin: 0;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -18,6 +19,7 @@
 }
 #content1 .flexRight, #content2 .flexRight, #content3 .flexRight {
   padding: 2rem;
+  margin: 0;
   width: 50%;
   display: flex;
   justify-content: center;
